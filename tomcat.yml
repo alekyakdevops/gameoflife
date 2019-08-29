@@ -1,0 +1,12 @@
+hosts: localhost
+become: yes
+tasks:
+name: updating packages and install tomcat
+apt:
+update_cache: yes
+name: tomcat8
+name: copying war file
+copy:
+src: /var/lib/jenkins/workspace/pipleline_terraform/gameoflife-web/target/gameoflife.war
+dest: /var/lib/tomcat8/webapps/gameoflife.war
+mode: 0777
