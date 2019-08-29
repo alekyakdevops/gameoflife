@@ -3,7 +3,7 @@ ageny any
 stages {
 stage('git') {
 steps {
-git 
+git 'https://github.com/alekyakdevops/gameoflife.git'
 }
 }//stage git
 stage('build'){
